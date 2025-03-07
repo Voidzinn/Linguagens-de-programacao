@@ -7,6 +7,78 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Teste</h1>
+    <form action="https://www.w3schools.com/action_page.php">
+        <fieldset>
+            <legend>Date</legend>
+            <label for="date">Data:</label>
+            <input type="date" id="date" name="date">
+        </fieldset>
+    
+        <fieldset>
+            <legend>Dados de Acesso</legend>
+            <label for="user">Usuário:</label>
+            <input type="text" id="user" name="user" placeholder="Usuário">
+    
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" placeholder="Senha">
+        </fieldset>
+    
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" placeholder="Nome">
+    
+            <label for="address">Endereço:</label>
+            <input type="text" id="address" name="address" placeholder="Endereço">
+    
+            <label for="number">Número:</label>
+            <input type="text" id="number" name="number" placeholder="Número">
+    
+            <label for="complement">Complemento:</label>
+            <input type="text" id="complement" name="complement" placeholder="Complemento">
+    
+            <label for="city">Cidade:</label>
+            <input list="city" name="city" placeholder="Sorocaba">
+            <datalist id="city">
+                <option value="Sorocaba">SP</option>
+                <option value="Presidente Epitácio">PA</option>
+                <option value="Uberlândia">MG</option>
+            </datalist>
+    
+            <label for="state">Estado:</label>
+            <select id="state" name="state">
+                <option value="SP">SP</option>
+                <option value="MG">MG</option>
+                <option value="PA">PA</option>
+            </select>
+    
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" placeholder="CEP">
+        </fieldset>
+    
+        <fieldset class="selectable">
+            <legend>Gênero</legend>
+            <label><input type="radio" id="masculino" name="gender" value="masculino"> Masculino</label>
+            <label><input type="radio" id="feminino" name="gender" value="feminino"> Feminino</label>
+            <label><input type="radio" id="other" name="gender" value="other"> Prefiro não falar</label>
+        </fieldset>
+    
+        <fieldset class="selectable">
+            <legend>Curso</legend>
+            <label><input type="checkbox" id="ads" name="course" value="ads"> ADS</label>
+            <label><input type="checkbox" id="jogos" name="course" value="jogos"> Jogos</label>
+            <label><input type="checkbox" id="gestao-de-ti" name="course" value="gestao-de-ti"> Gestão de TI</label>
+            <label><input type="checkbox" id="banco-de-dados" name="course" value="banco-de-dados"> Banco de dados</label>
+        </fieldset>
+    
+        <fieldset class="selectable">
+            <legend>Modelo</legend>
+            <label><input type="radio" id="presencial" name="model" value="presencial"> Presencial</label>
+            <label><input type="radio" id="ead" name="model" value="ead"> EAD</label>
+            <label><input type="radio" id="semi-presencial" name="model" value="semi-presencial"> Semi-presencial</label>
+        </fieldset>
+    
+        <input type="submit" value="Enviar">
+    </form>    
 </body>
 </html>
