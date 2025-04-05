@@ -5,3 +5,10 @@ header
     text-align: center;
     background-color: #1e1e2e;
 }
+
+main 
+{
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
