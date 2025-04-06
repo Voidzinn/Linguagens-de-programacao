@@ -30,14 +30,16 @@
     <script>
         const isGithubPages = location.hostname.includes("github.io");
     
-        let prefix = "Linguagens-de-programacao/";
-    
+        console.log(isGithubPages);
+
         if (!isGithubPages) {
             // Se está rodando localmente, calcula o prefixo com base na profundidade do path
             const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
             prefix = "../".repeat(depth);
         }
-    
+        
+        console.log(prefix);
+        
         fetch(prefix + "navbar.html")
             .then(res => res.text())
             .then(data => document.getElementById("navbar").innerHTML = data);
