@@ -30,15 +30,19 @@
     <script>
         const isGitHubPages = location.hostname.includes('github.io');
         const script = document.createElement('script');
+        const style = document.createElement('link');
+        style.rel = 'stylesheet';
 
         if (isGitHubPages) 
         {
             script.src = 'https://voidzinn.github.io/Linguagens-de-programacao/loadscript.js';
+            style.href = 'https://voidzinn.github.io/Linguagens-de-programacao/general.css';
         }  
         else 
         {
             const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
             script.src = "../".repeat(depth) + "loadscript.js";
+            style.href = "../".repeat(depth) + "general.css";
         }
 
         document.head.appendChild(script);
