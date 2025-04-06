@@ -28,12 +28,19 @@
     </div>
 
     <script>
-    const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
-    const prefix = "../".repeat(depth);
+        const isGithubPages = location.hostname.includes("github.io");
     
-    fetch(prefix + "navbar.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("navbar").innerHTML = data);
+        let prefix = "";
+    
+        if (!isGithubPages) {
+            // Se está rodando localmente, calcula o prefixo com base na profundidade do path
+            const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
+            prefix = "../".repeat(depth);
+        }
+    
+        fetch(prefix + "navbar.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("navbar").innerHTML = data);
     </script>
 </body>
 </html>
