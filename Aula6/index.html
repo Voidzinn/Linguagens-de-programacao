@@ -57,27 +57,20 @@
     <div id="footer"></div>
     
     <script>
-        const isGithubPages = location.hostname.includes("github.io");
-    
-        let prefix = "https://voidzinn.github.io/Linguagens-de-programacao/";
+        const isGitHubPages = location.hostname.includes('github.io');
+        const script = document.createElement('script');
 
-        console.log(isGithubPages);
-
-        if (!isGithubPages) {
-            // Se está rodando localmente, calcula o prefixo com base na profundidade do path
+        if (isGitHubPages) 
+        {
+            script.src = 'https://voidzinn.github.io/Linguagens-de-programacao/loadscript.js';
+        }  
+        else 
+        {
             const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
-            prefix = "../".repeat(depth);
+            script.src = "../".repeat(depth) + "loadscript.js";
         }
-        
-        console.log(prefix);
 
-        fetch(prefix + "navbar.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("navbar").innerHTML = data);
-    
-        fetch(prefix + "footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
+        document.head.appendChild(script);
     </script>
 </body>
 </html>

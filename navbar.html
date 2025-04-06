@@ -1,17 +1,6 @@
 <nav>
     <img id="githubimg" src="https://avatars.githubusercontent.com/Voidzinn" alt="Minha Foto">
-    <a id="homeLink" href="#">Início</a>
+    <a id="homeLink" href="https://voidzinn.github.io/Linguagens-de-programacao/">Início</a>
     <a href="https://github.com/Voidzinn">Github</a>
     <a href="https://www.linkedin.com/in/jo%C3%A3o-vitor-salazar-798240301 ">LinkedIn</a>
 </nav>
-
-<script>
-    const isGithubPages = location.hostname.includes("github.io");
-    const prefix = isGithubPages
-        ? "https://voidzinn.github.io/Linguagens-de-programacao/"
-        : location.pathname.split("/").filter(s => s !== "").map(() => "..").join("/") + "/";
-
-    // Atualiza o link "Início"
-    const homeLink = document.getElementById("homeLink");
-    homeLink.href = prefix + "index.html";
-</script>
