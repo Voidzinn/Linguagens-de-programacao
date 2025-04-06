@@ -30,6 +30,8 @@
     <script>
         const isGithubPages = location.hostname.includes("github.io");
     
+        let prefix = "Linguagens-de-programacao/";
+
         console.log(isGithubPages);
 
         if (!isGithubPages) {
@@ -39,7 +41,7 @@
         }
         
         console.log(prefix);
-        
+    
         fetch(prefix + "navbar.html")
             .then(res => res.text())
             .then(data => document.getElementById("navbar").innerHTML = data);
