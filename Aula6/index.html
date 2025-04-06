@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="navbar"></div>
+    <header>
+        <h1>Bem-vindo ao meu site!</h1>
+        <p>Esta é uma página para a tarefa de linguagens de programação.</p>
+    </header>
+    <main>
+        <section class="sobre">
+            <h2>Sobre mim</h2>
+            <p>Meu nome é João Vitor Salazar e sou estudante de ADS na <a href="https://facens.br/">FACENS</a>.
+            Estou atualmente no terceiro semestre, restando apenas 2 semestres!
+            Estou aprendendo HTML, CSS e JavaScript.
+            Meu objetivo é me tornar um desenvolvedor backend</p>
+        </section>
+        <section>
+            <h2>Projetos</h2>
+            <subsect>
+                <p>Projeto 1: Sistema de Estacionamento Alugável.
+                <br>
+                Este projeto consiste em um sistema de estacionamento onde o usuário pode alugar uma vaga por um determinado período de tempo.
+                O sistema deve permitir que o usuário faça login, reserve uma vaga, cancele a reserva e visualize o histórico de reservas.
+                <br>
+                O sistema foi desenvolvido em Python, utilizando o framework Flask para o backend e HTML/CSS para o frontend.
+                O banco de dados utilizado foi o MySQL.
+                </p>
+            </subsect>
+            <subsect>
+                <p>Projeto 2: Sistema de Gerenciamento de Tarefas.
+                <br>
+                Este projeto consiste em um sistema de gerenciamento de tarefas onde o usuário pode criar, editar e excluir tarefas.
+                O sistema deve permitir que o usuário faça login, visualize suas tarefas e marque as tarefas como concluídas.
+                <br>
+                O sistema foi desenvolvido em Python, utilizando o framework Flask para o backend e HTML/CSS para o frontend.
+                O banco de dados utilizado foi o MySQL.
+                </p>
+            </subsect>
+        </section>
+        <section class="video">
+            <iframe width="560" height="315"  src="https://www.youtube.com/embed/uU5vVT_Cp7c" title="Sleep Token - Alkaline" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <br>
+            <p>Este é um video clip da minha banda favorita atualmente!</p>
+        </section>
+
+
+    </main>
+    <div id="footer"></div>
+    
+    <script>
+        const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
+        const prefix = "../".repeat(depth);
+        
+        fetch(prefix + "navbar.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("navbar").innerHTML = data);
+
+        fetch(prefix + 'footer.html')
+          .then(res => res.text())
+          .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
