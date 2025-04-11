@@ -36,6 +36,22 @@
             document.getElementById('navigation-footer').innerHTML = footerContent;
           }
         </script>
-    </footer>      
+    </footer>
+    <script>
+      const isGitHubPages = location.hostname.includes('github.io');
+      const script = document.createElement('script');
+
+      if (isGitHubPages) 
+      {
+          script.src = 'https://voidzinn.github.io/Linguagens-de-programacao/loadscript.js';
+      }  
+      else 
+      {
+          const depth = location.pathname.split("/").filter(s => s !== "").length - 1;
+          script.src = "../".repeat(depth) + "loadscript.js";
+      }
+
+      document.head.appendChild(script);
+  </script>   
 </body>
 </html>
