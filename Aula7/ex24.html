@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo</title>
+</head>
+<body>
+    <main class="ex24">
+      <img class="cat" src="imgs/cat.png" alt="Imagem de um gato">
+      <img class="cat" src="imgs/cat.png" alt="Imagem de um gato">
+      <img class="cat" src="imgs/cat.png" alt="Imagem de um gato">
+      <img class="camel" src="imgs/camel.png" alt="Imagem de um camelo">
+      <img class="horse" src="imgs/horse.png" alt="Imagem de um cavalo">
+      <img class="horse" src="imgs/horse.png" alt="Imagem de um cavalo">
+      <img class="horse" src="imgs/horse.png" alt="Imagem de um cavalo">
+    </main>
+
+    <footer>
+        <div id="navigation-footer" style="text-align: center; margin-top: 0; color:black;"></div>
+      
+        <script>
+          // Captura o nome do arquivo atual
+          const currentPage = window.location.pathname.match(/ex(\d+)\.html/);
+          if (currentPage) {
+            const pageNum = parseInt(currentPage[1]);
+            const prevPage = pageNum > 1 ? `ex${pageNum - 1}.html` : null;
+            const nextPage = pageNum < 24 ? `ex${pageNum + 1}.html` : null;
+      
+            let footerContent = '';
+            if (prevPage) {
+              footerContent += `<a href="${prevPage}">⬅️ Anterior</a>`;
+            }
+            if (prevPage && nextPage) {
+              footerContent += ' | ';
+            }
+            if (nextPage) {
+              footerContent += `<a href="${nextPage}">Próximo ➡️</a>`;
+            }
+      
+            document.getElementById('navigation-footer').innerHTML = footerContent;
+          }
+        </script>
+    </footer>      
+</body>
+</html>

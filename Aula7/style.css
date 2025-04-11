@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    background-color: deepskyblue;
+}
+
+img {
+    max-width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    border: 4px black solid;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #1e1e2e; /* Cor Catppuccin Mocha vibes */
+    color: #cdd6f4;
+    text-align: center;
+    padding: 10px 0;
+    font-family: sans-serif;
+    z-index: 999;
+}
+
+.ex1 {
+    justify-content: flex-end;
+}
+
+.ex2 {
+    justify-content: center;
+}
+
+.ex3 {
+    justify-content: space-around;
+}
+
+.ex4 {
+    justify-content: space-between;
+}
+
+.ex5 {
+    align-items: flex-end;
+}
+
+.ex6 {
+    justify-content: center;
+    align-items: center;
+}
+
+.ex7 {
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.ex8 {
+    flex-direction: row-reverse;
+}
+
+.ex9 {
+    flex-direction: column;
+}
+
+.ex10 {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.ex11 {
+    flex-direction: column;
+    justify-content: end;
+}
+
+.ex12 {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.ex13 {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: end;
+}
+
+.ex14 .camel{
+    order: 1;
+}
+
+.ex15 .cat{
+    order: -3;
+}
+
+.ex16 .camel{
+    align-self: end;
+}
+
+.ex17 .camel{
+    align-self: end;
+    order: 2;
+}
+
+.ex18 {
+    flex-wrap: wrap;
+}
+
+.ex19 {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.ex20 {
+    flex-flow: column wrap;
+}
+
+.ex21 {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.ex22 {
+    flex-wrap: wrap;
+    align-content: end;
+}
+
+.ex23 {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;
+}
+
+.ex24 {
+    flex-direction: column-reverse;
+    align-content: space-between;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
